@@ -4,7 +4,12 @@
 4. ```cd sample```
 5. ```gem install bundler```
 6. ```bundle install```
-9. ```cucumber features```
+7. ```cucumber features/home.feature```  # Only run the home feature scenarios
+8. ```cucumber features```               # Run all feature scenarios in Headless Chrome
+9. ```cucumber BROWSER=chrome```         # Run all scenarios in Chrome
+10. ```cucumber BROWSER=firefox```       # Run all scenarios in Firefox
+11. ```cucumber BROWSER=safari```        # Run all scenarios in Safari
+12. ```rake build:all```                 $ Run all scenarios in all browser simultaneously 
 
 ### Resources
 * [FSAR](http://fullstackautomationwithruby.com/) Online Training Sessions that teach you how to automation web applications with Ruby.
