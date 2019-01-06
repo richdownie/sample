@@ -5,8 +5,16 @@ class ProductListCategory
     @domain = domain
   end
 
-  def logo
-    @browser.first(id: 'logo')
+  def meta
+    @browser.first(id: 'meta')
+  end
+
+  def register
+    meta.first(link: 'Register')
+  end
+
+  def login_in
+    meta.first(link: 'Log in')
   end
 
 end
