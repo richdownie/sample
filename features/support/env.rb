@@ -11,6 +11,16 @@ Before do
   @domain = ENV["DOMAIN"] || 'http://store.demoqa.com'
 end
 
+if ENV["CONSOLE_ERRORS"]
+  AfterStep do
+    js_errors = @browser.manage.logs.get(:browser)
+    js_errors.each do |error|
+      puts "CONSOLE ERRORS => #{error}"
+      puts "ping slack channel with SEVERE -> (https://rubygems.org/gems/slack-notifier)" unless error.level != "SEVERE"
+    end
+  end
+end
+
 After do
   if ENV["P"] #Pause the browser session with pry
     binding.pry
