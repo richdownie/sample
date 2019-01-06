@@ -15,6 +15,7 @@ Before do
   if ENV["RESULTS"]
     @cukehub_api_key = "GXtA65NoxiajzFCCWtpEaSBf"
   end
+  @keys = Keyboard.new(@browser, @domain)
   @header = Header.new(@browser, @domain)
   @footer = Footer.new(@browser, @domain)
   @checkout = Checkout.new(@browser, @domain)

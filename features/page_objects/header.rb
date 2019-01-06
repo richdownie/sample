@@ -26,7 +26,7 @@ class Header
   end
 
   def search_field
-    header.first(class: 'searchform')
+    header.first(class: 'search')
   end
 
 end
