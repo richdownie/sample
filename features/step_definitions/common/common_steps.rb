@@ -1,4 +1,4 @@
-Given /I should (NOT )?see "(.*)"/i do |visibility, text|
+Given /I should (NOT )?see "(.*)" on the page/i do |visibility, text|
   sleep 1
   text = text.to_s.strip
   if (visibility.to_s.strip == 'NOT') then
@@ -15,4 +15,8 @@ Given /I should (NOT )?be on the "(.*)" page/ do |visibility, value|
   else
     Selenium::WebDriver::Wait.new(timeout: 15).until {expect(@browser.current_url.to_s).to include(value)}
   end
+end
+
+Given /I click the "(.*)" button/i do |value|
+  @browser.first(name: 'Buy').click
 end

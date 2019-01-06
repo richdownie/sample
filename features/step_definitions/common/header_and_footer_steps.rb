@@ -10,4 +10,5 @@ end
 When /I search for (.*)/i do |product|
   @header.search_field.send_keys(product)
   @keys.press_enter
+  expect(@product_list_category.meta.displayed?).to eql(true) unless @browser.current_url.include? "alert" #redirect occurs in security testing
 end
