@@ -107,3 +107,15 @@ Feature: Product Description Page Scenarios
     Given I spot test the @product-description scenarios in the cuke build with Firefox
     And I spot test the @product-description scenarios in the cuke build with Safari
     Then I spot test the @product-description scenarios in the cuke build with Internet Explorer
+
+  Scenario: I create a new Product Review
+    And I click the "Create a Review" button
+    When I enter a valid review and submit the review form
+    Then I should see my review on the product description page
+
+  Scenario: I am able to view all Reviews
+        # DELETE all review can done with a custom API endpoint call or DB connect with SQL
+        # (similar to the cart items in checkout)
+    And I DELETE all existing reviews
+    When I submit a 100 reviews
+    Then I should be able to view all
