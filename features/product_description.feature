@@ -14,15 +14,15 @@ Feature: Product Description Page Scenarios
     And I should NOT see Indian Rupee price on the page
 
   Scenario: I verify the Add to Cart button with multiple items
-    And I click the "Add to Cart" button
+    And I click the Add to Cart button
     Then the checkout item should increment by 1
-    And I click the "Add to Cart" button
+    And I click the Add to Cart button
     Then the checkout item should increment by 1
     When I refresh the page
     Then I should see the same number of items in the checkout cart
 
   Scenario: I verify the Add to Cart button
-    And I click the "Add to Cart" button
+    And I click the Add to Cart button
     Then the checkout item should increment by 1
 
   Scenario: I verify the Facebook Like button works properly as an authenticated Facebook User

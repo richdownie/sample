@@ -14,7 +14,7 @@ Feature: Checkout Page Scenarios
   Scenario: I verify the cart with 1 item
     Given I DELETE all items in the cart
     And I am on the "/accessories/magic-mouse/" product description page
-    And I click the "Add to Cart" button
+    And I click the Add to Cart button
     And I am on the checkout page
     Then I should see the item on the page
     And I should NOT see "Oops, there is nothing in your cart." on the page

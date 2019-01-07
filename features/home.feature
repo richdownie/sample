@@ -47,7 +47,7 @@ Feature: Home Page Scenarios
 
   Scenario Outline: I verify the Buy Button for each Product in the carousel
     Given I am on the home page
-    When I click the Buy Now button for the <name> product
+    When I select <name> from the carousel and click the Buy Now buttohn
     Then I should be on the <product_description> page
     And I should see <name> on the page
 

@@ -33,6 +33,23 @@ Feature: Product List Category Page Scenarios
     Given I am on the product list category page
     Then I verify I am able to toggel between list and grid views
 
+  Scenario Outline: The product list category should display relevant products
+    Given I am on the product list category page
+    And I hover over the "Product Category" link
+    And I follow the <product> link
+    Then I should only see <product> on the page
+    And I should NOT see "Magic Mouse" on the page
+    And I should NOT see other non-related products on the page
+
+    Examples:
+      | product       |
+      | "Accessories" |
+      | "iMacs"       |
+      | "iPads"       |
+      | "iPhones"     |
+      | "iPods"       |
+      | "MacBooks"    |
+
   @manual
   Scenario: Spot test the @product-list-category scenarios in remaining supported browsers
     Given I am on the product list category page
