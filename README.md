@@ -9,7 +9,8 @@
 9. ```cucumber BROWSER=chrome```         # Run all scenarios in Chrome
 10. ```cucumber BROWSER=firefox```       # Run all scenarios in Firefox
 11. ```cucumber BROWSER=safari```        # Run all scenarios in Safari
-12. ```rake build:all```                 $ Run all scenarios in all browser simultaneously 
+12. ```cucumber RESULTS=true             # Send Results to Cukehub for analysis
+13. ```rake build:all```                 $ Run all scenarios in all browser simultaneously 
 
 ### Resources
 * [FSAR](http://fullstackautomationwithruby.com/) Online Training Sessions that teach you how to automation web applications with Ruby.
