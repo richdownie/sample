@@ -111,3 +111,15 @@ Feature: Product Description Page Scenarios
   Scenario: I verify the image scoll within the modal
     When I click on the main image
     Then I should be able to click through the different images within the modal
+
+  Scenario: I create a new Product Review
+    And I click the "Create a Review" button
+    When I enter a valid review and submit the review form
+    Then I should see my review on the product description page
+
+  Scenario: I am able to view all Reviews
+        # DELETE all review can done with a custom API endpoint call or DB connect with SQL
+        # (similar to the cart items in checkout)
+    And I DELETE all existing reviews
+    When I submit a 100 reviews
+    Then I should be able to view all
