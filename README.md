@@ -9,7 +9,7 @@
 9. ```cucumber BROWSER=chrome```         # Run all scenarios in Chrome
 10. ```cucumber BROWSER=firefox```       # Run all scenarios in Firefox
 11. ```cucumber BROWSER=safari```        # Run all scenarios in Safari
-12. ```cucumber RESULTS=true             # Send Results to Cukehub for analysis
+12. ```cucumber RESULTS=true```          # Send Results to Cukehub for analysis
 13. ```rake build:all```                 $ Run all scenarios in all browser simultaneously 
 
 ### Resources
