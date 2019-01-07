@@ -34,7 +34,8 @@ Feature: Product List Category Page Scenarios
     Then I verify I am able to toggel between list and grid views
 
   @manual
-  Scenario: Spot test above scenarios in remaining supported browsers
-    Given I spot test above sceanrios in IE
-    And I spot test above sceanrios in Firefox
-    And I spot test above sceanrios in Safari
+  Scenario: Spot test the @product-list-category scenarios in remaining supported browsers
+    Given I am on the product list category page
+    And I spot test the @product-list-category scenarios in the cuke build with Firefox
+    And I spot test the @product-list-category scenarios in the cuke build with Safari
+    Then I spot test the @product-list-category scenarios in the cuke build with Internet Explorer

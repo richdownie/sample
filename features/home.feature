@@ -71,7 +71,8 @@ Feature: Home Page Scenarios
     And I verify the carousel continues to trigger on its own
 
   @manual
-  Scenario: Spot test above scenarios in remaining supported browsers
-    Given I spot test above sceanrios in IE
-    And I spot test above sceanrios in Firefox
-    And I spot test above sceanrios in Safari
+  Scenario: Spot test the @home scenarios in remaining supported browsers
+    Given I am on the home page
+    And I spot test the @home scenarios in the cuke build with Firefox
+    And I spot test the @home scenarios in the cuke build with Safari
+    Then I spot test the @home scenarios in the cuke build with Internet Explorer

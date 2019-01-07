@@ -26,7 +26,8 @@ Feature: Checkout Page Scenarios
     Then the Home Button should NOT be selected
 
   @manual
-  Scenario: Spot test above scenarios in remaining supported browsers
-    Given I spot test above sceanrios in IE
-    And I spot test above sceanrios in Firefox
-    And I spot test above sceanrios in Safari
+  Scenario: Spot test the @checkout scenarios in remaining supported browsers
+    Given I am on the checkout page
+    And I spot test the @checkout scenarios in the cuke build with Firefox
+    And I spot test the @checkout scenarios in the cuke build with Safari
+    Then I spot test the @checkout scenarios in the cuke build with Internet Explorer

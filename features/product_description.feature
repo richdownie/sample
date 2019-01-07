@@ -13,7 +13,7 @@ Feature: Product Description Page Scenarios
     And I should see $150.00 on the page
     And I should NOT see Indian Rupee price on the page
 
-  Scenario: I verify the Add to Cart button
+  Scenario: I verify the Add to Cart button with multiple items
     And I click the "Add to Cart" button
     Then the checkout item should increment by 1
     And I click the "Add to Cart" button
@@ -21,17 +21,24 @@ Feature: Product Description Page Scenarios
     When I refresh the page
     Then I should see the same number of items in the checkout cart
 
+  Scenario: I verify the Add to Cart button
+    And I click the "Add to Cart" button
+    Then the checkout item should increment by 1
+
   Scenario: I verify the Facebook Like button works properly as an authenticated Facebook User
+    And I login facebook with a test user account
     And I click the Facebook Like button
     Then I should see the Like count increment by 1
     When I refresh the page
     Then the total number of facebook Likes should remain the same
     And I click the Facebook Like button
     Then I should see the Like count decrement by 1
+    When I refresh the page
+    Then the total number of facebook Likes should remain the same
 
   Scenario: I verify the Facebook Like button works properly as an unauthenticated Facebook User
     And I click the Facebook Like button
-    When I login to facebook
+    And I login facebook with a test user account from the facebook auth modal
     Then I should see the Like count increment by 1
     When I refresh the page
     Then the total number of facebook Likes should remain the same
@@ -96,7 +103,7 @@ Feature: Product Description Page Scenarios
     Then the Home Button should NOT be selected
 
   @manual
-  Scenario: Spot test above scenarios in remaining supported browsers
-    Given I spot test above sceanrios in IE
-    And I spot test above sceanrios in Firefox
-    And I spot test above sceanrios in Safari
+  Scenario: Spot test the @product-description scenarios in remaining supported browsers
+    Given I spot test the @product-description scenarios in the cuke build with Firefox
+    And I spot test the @product-description scenarios in the cuke build with Safari
+    Then I spot test the @product-description scenarios in the cuke build with Internet Explorer
