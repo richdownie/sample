@@ -12,3 +12,8 @@ When /I search for (.*)/i do |product|
   @keys.press_enter
   expect(@product_list_category.meta.displayed?).to eql(false) unless @browser.current_url.include? "alert" #redirect occurs in security testing
 end
+
+And /I verify the header cart count is equals "(.)"/i do |count|
+  sleep 0.1 while @header.cart_count.text == "0"
+  expect(@header.cart_count.text).to eql(count)
+end

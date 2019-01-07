@@ -29,4 +29,8 @@ class Header
     header.first(class: 'search')
   end
 
+  def cart_count
+    @browser.first(class: 'count')
+  end
+
 end
