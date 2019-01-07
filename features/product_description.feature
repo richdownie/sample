@@ -107,3 +107,7 @@ Feature: Product Description Page Scenarios
     Given I spot test the @product-description scenarios in the cuke build with Firefox
     And I spot test the @product-description scenarios in the cuke build with Safari
     Then I spot test the @product-description scenarios in the cuke build with Internet Explorer
+
+  Scenario: I verify the image scoll within the modal
+    When I click on the main image
+    Then I should be able to click through the different images within the modal
